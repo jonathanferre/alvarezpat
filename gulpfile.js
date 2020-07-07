@@ -1,6 +1,7 @@
-const { src, dest, watch } = require("gulp");
+const { src, dest, watch, parallel } = require("gulp");
 const sass = require("gulp-sass");
 const sync = require("browser-sync").create();
+const sourcemaps = require("gulp-sourcemaps");
 
 function generateCSS(cb) {
   src("app/scss/main.scss")
@@ -15,6 +16,15 @@ function watchSCSS(cb) {
   cb();
 }
 
+function generateMaps(cb) {
+  src("app/scss/main.scss")
+    .pipe(sourcemaps.init())
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest("app/css"))
+    .pipe(sync.stream());
+  cb();
+}
+
 function browserSync(cb) {
   sync.init({
     server: {
@@ -23,6 +33,7 @@ function browserSync(cb) {
   });
 
   watch("app/scss/main.scss", generateCSS);
+  watch("app/scss/main.scss", generateMaps);
   watch("./app/**.html").on("change", sync.reload);
   cb();
 }
@@ -30,3 +41,4 @@ function browserSync(cb) {
 exports.css = generateCSS;
 exports.watch = watchSCSS;
 exports.sync = browserSync;
+exports.sourcemaps = generateMaps;

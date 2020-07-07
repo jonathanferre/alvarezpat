@@ -6,12 +6,18 @@
     <title>Pat Alvarez | Producer & Mix Engineer</title>
 
     <!-- Styles -->
-    <link rel="stylesheet" href="css/animate.css" />
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- <link rel="stylesheet" href="css/animate.css" /> -->
+    <!-- <link rel="stylesheet" href="css/bootstrap.min.css" /> -->
     <link rel="stylesheet" href="css/main.css" />
 
-    <!-- Fav and touch icons -->
     <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Fav and touch icons -->
+    <!-- <link
       rel="apple-touch-icon"
       sizes="57x57"
       href="img/favicon/apple-icon-57x57.png"
@@ -85,17 +91,48 @@
     <meta
       name="msapplication-TileImage"
       content="img/favicon/ms-icon-144x144.png"
-    />
+    /> -->
   </head>
   <body>
-    <header></header>
+    <header>
+      <a class="logo" href="/">Alvarez Pat</a>
+
+      <input id="nav" type="checkbox" />
+      <label for="nav"></label>
+
+      <nav>
+        <ul>
+          <li><a href="discography.html">Discography</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
     <footer></footer>
-    <nav id="nav">
-      <ul>
-        <li><a href="index.html">Alvarez Pat</a></li>
-        <li><a href="discography.html">Discography</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
+
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="images/photos/photo-1.jpg" /></div>
+        <div class="swiper-slide"><img src="images/photos/photo-2.jpg" /></div>
+        <div class="swiper-slide"><img src="images/photos/photo-3.jpg" /></div>
+      </div>
+
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
   </body>
 </html>
+
+<script>
+  var mySwiper = new Swiper(".swiper-container", {
+    direction: "horizontal",
+    loop: true,
+    autoplay: {
+      delay: 5000,
+    },
+
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+</script>
