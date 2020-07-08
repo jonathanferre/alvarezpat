@@ -51,14 +51,20 @@
       width: 100%;
     }
 
-    > h2 {
+    > h2,
+    h3 {
       @include vendor("pointer-events", "none");
       bottom: (1.5em / 0.8);
       font-size: 0.8em;
-      left: (1.75em / 0.8);
+      padding-left: 30px;
       margin: 0;
       position: absolute;
       z-index: 1;
+    }
+
+    > h2 {
+      font-size: 1em;
+      margin-bottom: 25px;
     }
 
     > p {

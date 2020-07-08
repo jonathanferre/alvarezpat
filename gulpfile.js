@@ -20,7 +20,7 @@ function generateMaps(cb) {
   src("app/scss/main.scss")
     .pipe(sourcemaps.init())
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest("app/css"))
+    .pipe(dest("app/css"))
     .pipe(sync.stream());
   cb();
 }
@@ -33,7 +33,7 @@ function browserSync(cb) {
   });
 
   watch("app/scss/main.scss", generateCSS);
-  watch("app/scss/main.scss", generateMaps);
+  // watch("app/scss/main.scss", generateMaps);
   watch("./app/**.html").on("change", sync.reload);
   cb();
 }

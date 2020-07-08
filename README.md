@@ -1,13 +1,12 @@
 # Pat Alvarez | Producer & Mix Engineer
 
-
 alvarezpat uses a number of open source projects to work properly:
 
-* [Gulp] - the streaming build system
-* [jQuery] - jQuery
+- [Gulp] - the streaming build system
+- [jQuery] - jQuery
 
 And of course alvarezpat itself is open source with a [public repository][repo]
- on GitHub.
+on GitHub.
 
 ### Installation
 
@@ -21,8 +20,8 @@ $ npm install
 $ gulp sync
 ```
 
-
-   [repo]: <https://github.com/jonathanferre2/alvarezpat>
-   [node.js]: <http://nodejs.org>
-   [jQuery]: <http://jquery.com>
-   [Gulp]: <http://gulpjs.com>
+[repo]: https://github.com/jonathanferre2/alvarezpat
+[node.js]: http://nodejs.org
+[jquery]: http://jquery.com
+[gulp]: http://gulpjs.com
+[swiperjs]: https://swiperjs.com/

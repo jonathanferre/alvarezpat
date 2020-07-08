@@ -2,12 +2,18 @@
 
 .poptrox-overlay {
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .poptrox-popup {
   background: transparentize(_palette(bg-alt), 0.075);
   box-shadow: 0 1em 3em 0.5em rgba(0, 0, 0, 0.25);
   cursor: default;
+  right: 150px;
+
+  @include breakpoint("<=small") {
+    right: auto;
+  }
 
   &:before {
     @include vendor(
@@ -37,7 +43,7 @@
       "transition",
       "opacity #{_duration(transition)} ease-in-out"
     );
-    background-image: url("images/close.svg");
+    background-image: url("/app/images/icons/close.svg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: 3em;
@@ -80,12 +86,8 @@
   }
 
   .caption {
-    @include padding(2em, 2em);
-    @include vendor(
-      "background-image",
-      "linear-gradient(to top, rgba(16,16,16,0.45) 25%, rgba(16,16,16,0) 100%)"
-    );
-    bottom: 0;
+    padding: 0 2em 0.1em 2em;
+    top: 0;
     cursor: default;
     left: 0;
     position: absolute;
@@ -98,17 +100,35 @@
     h4,
     h5,
     h6 {
-      margin: 0 0 (_size(element-margin) * 0.25) 0;
+      // margin: 1em 0 (_size(element-margin) * 0.25) 0;
+      display: none;
     }
 
     p {
       color: _palette(fg-bold);
     }
+
+    .spotify-embed {
+      position: absolute;
+      left: 100%;
+
+      @include breakpoint("<=small") {
+        left: 0%;
+        width: 100%;
+
+        iframe {
+          width: 100%;
+          height: 80px;
+          position: absolute;
+          bottom: 0;
+        }
+      }
+    }
   }
 
   .loader {
     @include vendor("animation", "spinner 1s infinite linear !important");
-    background-image: url("images/spinner.svg");
+    background-image: url("/app/images/icons/spinner.svg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -167,14 +187,20 @@
       display: none;
     }
 
-    .caption {
-      display: none !important;
-    }
+    // .caption {
+    //   display: none !important;
+    // }
 
     .closer,
     .nav-previous,
     .nav-next {
       display: none !important;
+    }
+  }
+
+  .pic {
+    img {
+      max-height: 380px !important;
     }
   }
 }
