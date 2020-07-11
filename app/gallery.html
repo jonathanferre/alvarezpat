@@ -10,6 +10,11 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
     <!-- Fav and touch icons -->
     <link
@@ -103,10 +108,21 @@
         </ul>
       </nav>
     </header>
-    <div class="contact">
-      <a href="mailto:contact@alvarezpat.com" target="_blank"
-        >contact@alvarezpat.com</a
-      >
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="images/photos/photo-1.jpg" /></div>
+        <div class="swiper-slide"><img src="images/photos/photo-2.jpg" /></div>
+        <div class="swiper-slide"><img src="images/photos/photo-3.jpg" /></div>
+        <div class="swiper-slide"><img src="images/photos/photo-4.jpg" /></div>
+        <div class="swiper-slide"><img src="images/photos/photo-5.png" /></div>
+        <div class="swiper-slide"><img src="images/photos/photo-6.jpg" /></div>
+        <div class="swiper-slide"><img src="images/photos/photo-7.JPG" /></div>
+        <div class="swiper-slide"><img src="images/photos/photo-8.jpg" /></div>
+        <div class="swiper-slide"><img src="images/photos/photo-11.jpg" /></div>
+      </div>
+
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
     </div>
     <footer>
       <div class="icons">
@@ -134,3 +150,18 @@
     </footer>
   </body>
 </html>
+
+<script>
+  var mySwiper = new Swiper(".swiper-container", {
+    direction: "horizontal",
+    loop: true,
+    autoplay: {
+      delay: 5000,
+    },
+
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+</script>

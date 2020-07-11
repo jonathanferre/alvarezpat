@@ -1089,7 +1089,7 @@ table {
 .content-profile {
   text-align: center; }
   .content-profile h1 {
-    margin-top: 1em; }
+    margin-top: 2em; }
   .content-profile p {
     margin: 10px auto 30px auto;
     width: 65%; }
@@ -1443,12 +1443,20 @@ table {
         -ms-transition-delay: 0.95s;
         transition-delay: 0.95s; } }
 
-/* Contanct */
 .flex-wrapper {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
   justify-content: space-between; }
+  .flex-wrapper .content-profile {
+    text-align: center;
+    background: url("/../images/photos/photo-2.jpg");
+    height: calc(100vh - 120px);
+    background-repeat: no-repeat;
+    background-size: cover; }
+    @media screen and (max-width: 980px) {
+      .flex-wrapper .content-profile {
+        background-position-x: 50%; } }
   .flex-wrapper .contact {
     text-align: center;
     background: url("/../images/photos/photo-13.jpg");
