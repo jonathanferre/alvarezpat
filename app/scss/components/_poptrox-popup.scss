@@ -43,16 +43,16 @@
       "transition",
       "opacity #{_duration(transition)} ease-in-out"
     );
-    background-image: url("/app/images/icons/close.svg");
+    background-image: url("/../images/icons/close.svg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: 3em;
-    height: 5em;
+    height: 3em;
     opacity: 0;
     position: absolute;
     right: 0;
     top: 0;
-    width: 5em;
+    width: 3em;
     z-index: 2;
   }
 
@@ -62,7 +62,7 @@
       "transition",
       "opacity #{_duration(transition)} ease-in-out"
     );
-    background-image: url("images/arrow.svg");
+    background-image: url("/../images/icons/arrow.svg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: 5em;
@@ -72,7 +72,7 @@
     opacity: 0;
     position: absolute;
     top: 50%;
-    width: 6em;
+    width: 3em;
     z-index: 2;
   }
 
@@ -128,7 +128,7 @@
 
   .loader {
     @include vendor("animation", "spinner 1s infinite linear !important");
-    background-image: url("/app/images/icons/spinner.svg");
+    background-image: url("/../images/icons/spinner.svg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -190,12 +190,6 @@
     // .caption {
     //   display: none !important;
     // }
-
-    .closer,
-    .nav-previous,
-    .nav-next {
-      display: none !important;
-    }
   }
 
   .pic {

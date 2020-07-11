@@ -1,4 +1,36 @@
 /* Main */
+.content-profile {
+  text-align: center;
+
+  h1 {
+    margin-top: 1em;
+  }
+  p {
+    margin: 10px auto 30px auto;
+    width: 65%;
+
+    @include breakpoint("<=xsmall") {
+      width: 90%;
+    }
+  }
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: #34a58e !important;
+}
+
+.swiper-container {
+  width: 100%;
+  height: 100%;
+  max-width: 1280px;
+
+  img {
+    width: 100%;
+  }
+}
+
+/* Discography */
 
 #main {
   @include vendor(
@@ -180,5 +212,32 @@
       _misc(main-layout, xsmall, pad),
       _misc(main-layout, xsmall, minHeight)
     );
+  }
+}
+
+/* Contanct */
+.flex-wrapper {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .contact {
+    text-align: center;
+    background: url("/../images/photos/photo-13.jpg");
+    height: calc(100vh - 120px);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include breakpoint("<=medium") {
+      background-position-x: 50%;
+    }
+
+    a {
+      font-size: 2em;
+      color: #fff;
+      position: relative;
+      top: 40%;
+    }
   }
 }

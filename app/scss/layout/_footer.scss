@@ -1,0 +1,36 @@
+footer {
+  overflow: hidden;
+  background: #222;
+
+  .icons {
+    text-align: center;
+    margin: 10px;
+
+    a {
+      color: #fff;
+      margin-left: 10px;
+      margin-right: 10px;
+      font-size: 25px;
+    }
+
+    .fa-discogs {
+      background-color: #fff;
+      mask: url("/../images/icons/discogs.svg") no-repeat center / contain;
+      -webkit-mask: url("/../images/icons/discogs.svg") no-repeat center /
+        contain;
+      width: 21px;
+      height: 24px;
+      position: relative;
+      top: 3px;
+      right: 1px;
+      display: inline-block;
+
+      &:hover {
+        background-color: #34a58e;
+        mask: url("/../images/icons/discogs.svg") no-repeat center / contain;
+        -webkit-mask: url("/../images/icons/discogs.svg") no-repeat center /
+          contain;
+      }
+    }
+  }
+}
