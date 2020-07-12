@@ -17,7 +17,7 @@
 
 .swiper-button-prev,
 .swiper-button-next {
-  color: #34a58e !important;
+  color: #c4c4c4 !important;
 }
 
 .swiper-container {
@@ -53,6 +53,7 @@
     opacity: 1;
     overflow: hidden;
     position: relative;
+    // min-height: 25em;
 
     &:after {
       @include vendor(
